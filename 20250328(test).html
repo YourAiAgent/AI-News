@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>최신 인포그래픽 요약</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Pretendard', sans-serif;
+      background-color: #F5F5F7;
+      margin: 0;
+      padding: 40px;
+      color: #1A1A1A;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #7B4AFF;
+      margin: 40px 0 20px;
+    }
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .card h3 {
+      font-size: 22px;
+      font-weight: bold;
+      color: #1A1A1A;
+    }
+    .card p {
+      font-size: 16px;
+      color: #666666;
+      line-height: 1.6;
+    }
+    .quote {
+      border-left: 4px solid #7B4AFF;
+      background: #EFEAFF;
+      padding: 16px;
+      font-size: 16px;
+      color: #666666;
+      margin-top: 20px;
+    }
+    .footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="section-title">하루 요약</div>
+    <h1>AI, 사회, 경제 등 주요 트렌드 인포그래픽</h1>
+  </header>
+
+  <section class="card-container">
+    <div class="card">
+      <h3>☀️ [날씨] 멜버른, 맑고 따뜻한 날씨</h3>
+      <p>멜버른은 오늘 맑고 따뜻한 날씨를 보일 예정입니다. 최고 31°C, 최저 18°C로 예상됩니다.</p>
+    </div>
+    <div class="card">
+      <h3>💰 [경제] 시드니 철도 확장에 3,250만 달러 투자</h3>
+      <p>호주 정부는 남서부 철도 연장 구간에 3,250만 달러를 추가 투입합니다. 교통 인프라 개선을 위한 전략입니다.</p>
+    </div>
+    <div class="card">
+      <h3>💰 [경제] 전기 요금 150달러 추가 지원</h3>
+      <p>모든 호주 가정에 150달러 전기요금 할인이 제공됩니다. 생활비 부담 완화 조치입니다.</p>
+    </div>
+    <div class="card">
+      <h3>🏛️ [정치] 태평양 섬나라 원조 2배 확대</h3>
+      <p>호주 정부는 태평양 섬나라 지원을 전년 대비 5.2% 늘려 21.57억 달러로 확대합니다.</p>
+    </div>
+    <div class="card">
+      <h3>🚨 [사회] 시드니 공항·서부 지역 홍역 노출</h3>
+      <p>NSW 보건부는 홍역 감염자의 경로를 공개하며, 해당 지역 방문자에게 주의를 당부했습니다.</p>
+    </div>
+    <div class="card">
+      <h3>🎮 닌텐도 다이렉트, 210만건 X 포스트</h3>
+      <p>DQ1&2 HD2D, みんなのゴルフ Switch 등 신작 발표로 긍정적 반응이 이어졌습니다.</p>
+    </div>
+    <div class="card">
+      <h3>🎨 지브리 스타일 이미지, 460만 포스트</h3>
+      <p>Sam Altman의 프로필 이미지 이후 AI 생성 지브리 이미지가 트렌드로 확산되었습니다.</p>
+    </div>
+    <div class="card">
+      <h3>🏀 LeBron 복귀, 330만 포스트 화제</h3>
+      <p>40세의 나이에도 여전한 경기력을 보인 LeBron James의 복귀에 팬들의 찬사가 쏟아졌습니다.</p>
+    </div>
+    <div class="card">
+      <h3>🎥 젠스파크, Veo 2 지원 재개</h3>
+      <p>중단되었던 구글 Veo 2 지원이 재개되며, 콘텐츠 제작 혁신에 대한 기대가 커지고 있습니다.</p>
+    </div>
+    <div class="card">
+      <h3>🚀 GPT-4o 업데이트</h3>
+      <p>ChatGPT의 GPT-4o가 복잡한 기술 문제 처리 능력을 강화하며, 더욱 매력적인 도구로 거듭났습니다.</p>
+    </div>
+    <div class="card">
+      <h3>😮 MidJourney V7 출시 예고</h3>
+      <p>AI 이미지 생성 플랫폼 미드저니의 V7 버전이 곧 공개될 예정으로, 업계의 기대를 모으고 있습니다.</p>
+    </div>
+    <div class="card">
+      <h3>🔍 Claude Sonnet 3.7</h3>
+      <p>앤트로픽의 500K 컨텍스트 윈도우 모델이 문맥 이해의 새로운 시대를 엽니다.</p>
+    </div>
+    <div class="card">
+      <h3>🎨 Tiny Workers 트렌드</h3>
+      <p>Freepik의 Miniworld 영상 콘텐츠가 SNS에서 유행하며, 창의적인 콘텐츠 흐름을 이끌고 있습니다.</p>
+    </div>
+  </section>
+
+  <div class="quote">
+    오늘의 소식은 여기까지입니다! 🌟 각 기술의 발전이 우리 일상의 진화를 어떻게 이끌어낼지 기대하며, 앞으로도 지속적인 관심 부탁드립니다. ✨
+  </div>
+
+  <footer class="footer">
+    출처: OpenAI, 호주 정부 발표, Freepik, Anthropic, Nintendo, X Trends 등
+  </footer>
+</body>
+</html>
