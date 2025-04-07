@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호주 거주 한국인을 위한 최신 뉴스 모음 - 2025년 4월 8일</title>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #7B4AFF;
+            --primary-color-light: rgba(123, 74, 255, 0.1);
+            --neutral-1: #F5F5F7;
+            --neutral-2: #DDDDDD;
+            --neutral-3: #666666;
+            --neutral-4: #1A1A1A;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --radius: 20px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            background-color: var(--neutral-1);
+            color: var(--neutral-4);
+            line-height: 1.4;
+            padding: 16px;
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 16px;
+            position: relative;
+        }
+        
+        .header-badge {
+            display: inline-block;
+            background-color: var(--primary-color-light);
+            color: var(--primary-color);
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 50px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--neutral-4);
+            margin-bottom: 4px;
+            word-break: keep-all;
+        }
+        
+        .date {
+            font-size: 16px;
+            color: var(--neutral-3);
+            margin-bottom: 12px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 20px 0 12px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 30px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .compact-card {
+            background-color: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 12px;
+            transition: transform 0.3s ease;
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .compact-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .compact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--primary-color);
+        }
+        
+        .card-number {
+            position: absolute;
+            top: 5px;
+            right: 8px;
+            font-size: 24px;
+            font-weight: 700;
+            color: rgba(123, 74, 255, 0.15);
+            line-height: 1;
+        }
+        
+        .compact-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--neutral-4);
+            margin-bottom: 8px;
+            padding-right: 24px;
+            position: relative;
+            z-index: 1;
+            word-break: keep-all;
+        }
+        
+        .compact-content {
+            font-size: 12px;
+            color: var(--neutral-3);
+            word-break: keep-all;
+            position: relative;
+            z-index: 1;
+            flex-grow: 1;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+        }
+
+        /* 차트와 분석 섹션 */
+        .insight-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .chart-container {
+            background-color: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 12px;
+            text-align: center;
+            height: 100%;
+        }
+        
+        .chart-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--neutral-4);
+        }
+        
+        .chart-wrapper {
+            margin: 0 auto;
+            height: 200px;
+        }
+        
+        .insight-banner {
+            background: linear-gradient(90deg, var(--primary-color), #6236CA);
+            color: white;
+            padding: 15px;
+            border-radius: var(--radius);
+            margin: 15px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .insight-banner h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .insight-banner p {
+            font-size: 14px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .progress-container {
+            margin-top: 15px;
+        }
+        
+        .progress-item {
+            margin-bottom: 10px;
+        }
+        
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            font-size: 13px;
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background-color: var(--neutral-2);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        
+        .progress-value {
+            height: 100%;
+            background-color: var(--primary-color);
+            border-radius: 3px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 12px 0;
+            border-top: 1px solid var(--neutral-2);
+            color: var(--neutral-3);
+            font-size: 12px;
+        }
+        
+        /* 뉴스 카테고리 태그 */
+        .category-tag {
+            display: inline-block;
+            font-size: 10px;
+            background-color: var(--primary-color-light);
+            color: var(--primary-color);
+            border-radius: 4px;
+            padding: 2px 6px;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+        
+        .tag-culture {
+            background-color: rgba(255, 138, 61, 0.1);
+            color: #FF8A3D;
+        }
+        
+        .tag-economy {
+            background-color: rgba(42, 199, 105, 0.1);
+            color: #2AC769;
+        }
+        
+        .tag-visa {
+            background-color: rgba(61, 139, 255, 0.1);
+            color: #3D8BFF;
+        }
+        
+        /* 모바일 최적화 */
+        @media (max-width: 1024px) {
+            .news-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .insight-section {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* 인쇄 미디어 쿼리 */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+                font-size: 12px;
+            }
+            
+            .container {
+                max-width: 100%;
+            }
+            
+            .compact-card {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid var(--neutral-2);
+            }
+            
+            .chart-container {
+                break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid var(--neutral-2);
+            }
+            
+            .insight-banner {
+                background: transparent;
+                color: var(--neutral-4);
+                border: 1px solid var(--primary-color);
+                break-inside: avoid;
+            }
+            
+            .insight-banner p {
+                color: var(--neutral-3);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-badge">호주-한국 뉴스</div>
+            <h1>호주 거주 한국인을 위한 최신 뉴스 모음</h1>
+            <p class="date">2025년 4월 8일</p>
+        </header>
+        
+        <div class="insight-banner">
+            <h3>주요 인사이트</h3>
+            <p>호주와 한국의 협력이 심화됨에 따라 무역, 문화, 교육 분야에서 새로운 기회가 확대되고 있습니다. 특히 방위산업과 스타트업 분야의 협력이 주목받고 있습니다.</p>
+        </div>
+        
+        <div class="insight-section">
+            <div class="chart-container">
+                <h3 class="chart-title">호주-한국 교류 분야</h3>
+                <div class="chart-wrapper">
+                    <canvas id="relationChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <h3 class="chart-title">분야별 성장 지수</h3>
+                <div class="progress-container">
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>한국 식품 시장</span>
+                            <span>30%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-value" style="width: 30%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>문화 콘텐츠 소비</span>
+                            <span>45%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-value" style="width: 45%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>기술 분야 협력</span>
+                            <span>25%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-value" style="width: 25%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label">
+                            <span>교육 교류</span>
+                            <span>20%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-value" style="width: 20%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">주요 뉴스</h2>
+        
+        <div class="news-grid">
+            <div class="compact-card">
+                <div class="card-number">1</div>
+                <div class="category-tag">안보</div>
+                <h3 class="compact-title">호주-한국, 방위산업 협력 강화</h3>
+                <p class="compact-content">최근 호주와 한국은 방위산업 분야에서 주요 협력 계약을 체결했습니다. 이 협력은 중국의 지역 내 영향력 확대에 대응하는 전략적 파트너십의 일환입니다.</p>
+            </div>
+            
+            <div class="compact-card">
+                <div class="card-number">2</div>
+                <div class="category-tag tag-visa">비자</div>
+                <h3 class="compact-title">워킹홀리데이 비자 시스템 개편 임박</h3>
+                <p class="compact-content">호주 정부는 2025년 중반부터 워킹홀리데이 비자 시스템을 대폭 개편할 계획입니다. 한국 청년들에게 더 많은 취업 기회와 교육 옵션이 제공됩니다.</p>
+            </div>
+            
+            <div class="compact-card">
+                <div class="card-number">3</div>
+                <div class="category-tag tag-culture">문화</div>
+                <h3 class="compact-title">시드니 한인 문화축제, 현지인들에게 큰 인기</h3>
+                <p class="compact-content">지난 주말 시드니에서 열린 한국 문화축제가 호주 현지인들 사이에서 큰 호응을 얻었습니다. K-팝 공연과 한식 체험 부스가 특히 인기를 끌었습니다.</p>
+            </div>
+            
+            <div class="compact-card">
+                <div class="card-number">4</div>
+                <div class="category-tag tag-economy">경제</div>
+                <h3 class="compact-title">호주 경제와 한류, 시너지 효과 확대</h3>
+                <p class="compact-content">한류의 글로벌 영향력이 호주 경제에도 긍정적 영향을 미치고 있습니다. 호주 내 한국 문화 콘텐츠 소비가 증가하면서 관련 산업 성장이 확대되고 있습니다.</p>
+            </div>
+            
+            <div class="compact-card">
+                <div class="card-number">5</div>
+                <div class="category-tag tag-visa">교육</div>
+                <h3 class="compact-title">호주 대학, 한국 유학생 장학금 프로그램 확대</h3>
+                <p class="compact-content">호주 주요 대학들이 한국 유학생들을 위한 장학금 프로그램을 확대한다고 발표했습니다. 교육 분야에서 양국 간 교류가 더욱 강화될 전망입니다.</p>
+            </div>
+            
+            <div class="compact-card">
+                <div class="card-number">6</div>
+                <div class="category-tag tag-economy">무역</div>
+                <h3 class="compact-title">호주-한국 무역관계, 새로운 전환점 맞아</h3>
+                <p class="compact-content">최근 양국 간 무역 협정 업데이트로 호주와 한국의 교역량이 크게 증가했습니다. 특히 청정 에너지와 첨단 기술 분야에서 협력이 강화되고 있습니다.</p>
+            </div>
+            
+            <div class="compact-card">
+                <div class="card-number">7</div>
+                <div class="category-tag tag-culture">사회</div>
+                <h3 class="compact-title">멜버른 한인 커뮤니티, 현지 자선활동으로 주목</h3>
+                <p class="compact-content">멜버른의 한인 커뮤니티가 지역 사회 자선활동으로 현지 언론의 주목을 받고 있습니다. 노숙자 지원과 청소년 교육 프로그램이 긍정적 평가를 받고 있습니다.</p>
+            </div>
+            
+            <div class="compact-card">
+                <div class="card-number">8</div>
+                <div class="category-tag tag-economy">소비</div>
+                <h3 class="compact-title">호주 내 한국 식품 시장, 급성장세 지속</h3>
+                <p class="compact-content">호주 내 한국 식품 시장이 지난 1년간 30% 이상 성장했습니다. 김치와 라면 등 한국 전통 식품뿐 아니라 간편식과 건강식품 분야에서도 관심이 높아지고 있습니다.</p>
+            </div>
+            
+            <div class="compact-card">
+                <div class="card-number">9</div>
+                <div class="category-tag tag-economy">창업</div>
+                <h3 class="compact-title">브리즈번, 한-호 스타트업 협력 허브로 부상</h3>
+                <p class="compact-content">브리즈번이 한국과 호주 스타트업 협력의 중심지로 떠오르고 있습니다. 양국 정부의 지원 아래 기술 혁신과 창업 생태계 교류가 활발히 이루어지고 있습니다.</p>
+            </div>
+            
+            <div class="compact-card">
+                <div class="card-number">10</div>
+                <div class="category-tag tag-visa">이민</div>
+                <h3 class="compact-title">호주 체류 한국인 비자 갱신 절차 간소화</h3>
+                <p class="compact-content">호주 정부는 한국인 장기 체류자들의 비자 갱신 절차를 간소화한다고 발표했습니다. 온라인 신청 시스템 개선과 처리 기간이 단축될 예정입니다.</p>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>본 뉴스는 Financial Times, 7 News Australia, MBC Korea의 보도 내용을 바탕으로 작성되었습니다.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // 도넛 차트 생성
+        window.onload = function() {
+            const ctx = document.getElementById('relationChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['경제/무역', '문화/엔터', '교육', '기술/스타트업', '기타'],
+                    datasets: [{
+                        label: '호주-한국 교류 분야',
+                        data: [35, 28, 15, 17, 5],
+                        backgroundColor: [
+                            '#7B4AFF',
+                            '#5E34CC',
+                            '#9E75FF',
+                            '#C4ADFF',
+                            '#DDDDDD'
+                        ],
+                        borderWidth: 0,
+                        cutout: '70%'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                font: {
+                                    family: 'Pretendard',
+                                    size: 11
+                                },
+                                padding: 10,
+                                usePointStyle: true,
+                                pointStyle: 'circle'
+                            }
+                        }
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+</html>
