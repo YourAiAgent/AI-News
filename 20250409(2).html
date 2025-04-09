@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4월 9일 최신 AI 뉴스</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f7f9fc;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 30px;
+        }
+        
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(90deg, #6366F1, #A855F7);
+            border-radius: 2px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #6366F1, #A855F7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        
+        .date {
+            font-size: 1.2rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-header {
+            padding: 25px 25px 15px;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+        }
+        
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1e293b;
+        }
+        
+        .card-content {
+            padding: 25px;
+        }
+        
+        .card-content p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+            color: #475569;
+        }
+        
+        .card-content p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .personal-view {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 35px;
+            border-left: 5px solid #6366F1;
+            margin-top: 30px;
+        }
+        
+        .personal-view h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #1e293b;
+        }
+        
+        .personal-view p {
+            font-size: 1.1rem;
+            color: #475569;
+            line-height: 1.7;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        .highlight {
+            color: #6366F1;
+            font-weight: 500;
+        }
+        
+        .gemini {
+            background-color: #e0f2fe;
+        }
+        
+        .zenspork {
+            background-color: #fef3c7;
+        }
+        
+        .ai-concerns {
+            background-color: #fee2e2;
+        }
+        
+        .gates {
+            background-color: #dcfce7;
+        }
+        
+        .meta {
+            background-color: #f3e8ff;
+        }
+        
+        .runway {
+            background-color: #f1f5f9;
+        }
+        
+        .gemini-icon {
+            background-color: #0ea5e9;
+            color: white;
+        }
+        
+        .zenspork-icon {
+            background-color: #f59e0b;
+            color: white;
+        }
+        
+        .ai-concerns-icon {
+            background-color: #ef4444;
+            color: white;
+        }
+        
+        .gates-icon {
+            background-color: #10b981;
+            color: white;
+        }
+        
+        .meta-icon {
+            background-color: #a855f7;
+            color: white;
+        }
+        
+        .runway-icon {
+            background-color: #64748b;
+            color: white;
+        }
+        
+        .tag-upgrade {
+            background-color: #dbeafe;
+            color: #2563eb;
+        }
+        
+        .tag-agent {
+            background-color: #fef3c7;
+            color: #d97706;
+        }
+        
+        .tag-warning {
+            background-color: #fee2e2;
+            color: #dc2626;
+        }
+        
+        .tag-prediction {
+            background-color: #dcfce7;
+            color: #059669;
+        }
+        
+        .tag-controversy {
+            background-color: #f3e8ff;
+            color: #9333ea;
+        }
+        
+        .tag-innovation {
+            background-color: #f1f5f9;
+            color: #475569;
+        }
+        
+        .emoji {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>최신 AI 뉴스 업데이트</h1>
+            <p class="date">2025년 4월 9일</p>
+        </header>
+        
+        <div class="news-grid">
+            <!-- 구글 Gemini 2.5 Pro -->
+            <div class="news-card gemini">
+                <span class="tag tag-upgrade">업그레이드</span>
+                <div class="card-header">
+                    <div class="icon gemini-icon">
+                        <span class="emoji">🔍</span>
+                    </div>
+                    <h2 class="card-title">구글 Gemini 2.5 Pro 업그레이드</h2>
+                </div>
+                <div class="card-content">
+                    <p><span class="highlight">Deep Research</span> 기능이 강화되어 정보 탐색과 분석 리포트를 제공하며, 논리적 분석 능력이 대폭 향상되었습니다.</p>
+                    <p>Gemini Advanced 사용자는 웹과 모바일에서 이 기능을 활용해 쉽게 보고서를 생성할 수 있습니다.</p>
+                </div>
+            </div>
+            
+            <!-- 젠스파크 "슈퍼 에이전트" -->
+            <div class="news-card zenspork">
+                <span class="tag tag-agent">에이전트</span>
+                <div class="card-header">
+                    <div class="icon zenspork-icon">
+                        <span class="emoji">⚡</span>
+                    </div>
+                    <h2 class="card-title">젠스파크 "슈퍼 에이전트"</h2>
+                </div>
+                <div class="card-content">
+                    <p>젠스파크의 슈퍼 에이전트가 다양한 분야에서 활용되고 있으며, 교육 문제 제작부터 대시보드 구축까지 응용 가능성이 큽니다.</p>
+                    <p>해당 기술을 통해 <span class="highlight">직업에 따라 개인화된 콘텐츠 생성</span>이 가능하다는 점은 주목할 만합니다.</p>
+                </div>
+            </div>
+            
+            <!-- AI의 장단점에 대한 논의 -->
+            <div class="news-card ai-concerns">
+                <span class="tag tag-warning">논란</span>
+                <div class="card-header">
+                    <div class="icon ai-concerns-icon">
+                        <span class="emoji">⚖️</span>
+                    </div>
+                    <h2 class="card-title">AI의 장단점 논의</h2>
+                </div>
+                <div class="card-content">
+                    <p>오픈AI의 Will Depue는 AI가 일부 사용자에게는 장점을 제공하지만, <span class="highlight">전체적으로는 불균형을 초래</span>할 수 있다고 경고했습니다.</p>
+                    <p>상위 1%가 더욱 똑똑해지는 반면, 많은 사람들이 뒤처질 수 있다는 우려입니다.</p>
+                </div>
+            </div>
+            
+            <!-- 빌 게이츠의 경고 -->
+            <div class="news-card gates">
+                <span class="tag tag-prediction">전망</span>
+                <div class="card-header">
+                    <div class="icon gates-icon">
+                        <span class="emoji">🔮</span>
+                    </div>
+                    <h2 class="card-title">빌 게이츠의 경고</h2>
+                </div>
+                <div class="card-content">
+                    <p>AI가 <span class="highlight">"가장 심오한 10년"</span>을 정의하게 될 것이라 전망하며, 국가별 주도권 경쟁이 벌어질 것이라고 경고했습니다.</p>
+                </div>
+            </div>
+            
+            <!-- 메타 Llama 4 성능 논란 -->
+            <div class="news-card meta">
+                <span class="tag tag-controversy">성능 이슈</span>
+                <div class="card-header">
+                    <div class="icon meta-icon">
+                        <span class="emoji">📉</span>
+                    </div>
+                    <h2 class="card-title">메타 Llama 4 성능 논란</h2>
+                </div>
+                <div class="card-content">
+                    <p>Llama 4가 높은 콘텍스트 용량을 자랑함에도 불구하고 <span class="highlight">실제 테스트에서 성능 저하</span>가 관찰되었습니다.</p>
+                    <p>이로 인해 메타 내부에서도 우려가 커지고 있습니다.</p>
+                </div>
+            </div>
+            
+            <!-- Runway의 Gen-4 Turbo 소개 -->
+            <div class="news-card runway">
+                <span class="tag tag-innovation">혁신</span>
+                <div class="card-header">
+                    <div class="icon runway-icon">
+                        <span class="emoji">🎬</span>
+                    </div>
+                    <h2 class="card-title">Runway의 Gen-4 Turbo</h2>
+                </div>
+                <div class="card-content">
+                    <p><span class="highlight">10초짜리 영상을 생성하는 데 단 30초</span>가 걸리는 속도가 큰 장점으로 내세워지고 있습니다.</p>
+                    <p>현재 모든 요금제에서 이용 가능한 상태입니다.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="personal-view">
+            <h2>개인적인 견해</h2>
+            <p>최근 AI 기술의 급성장은 많은 산업에 혁신적인 변화를 가져오고 있습니다. 그러나 AI의 혜택이 고르게 분배되지 않는다는 사실은 고찰할 필요가 있습니다. 상위 클래스와 하위 클래스 간의 격차가 넓어지는 것은 우리가 우려해야 할 문제입니다. 따라서 기술 발전의 방향성에 대해 항상 비판적 사고를 유지하는 것이 중요하다고 생각합니다. 💭</p>
+        </div>
+        
+        <footer>
+            <p>© 2025 YourAiAgent - AI 뉴스 업데이트</p>
+        </footer>
+    </div>
+</body>
+</html>
