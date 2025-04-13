@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025년 4월 13일 SNS 최신 트렌드 요약</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+        :root {
+            --primary: #7B4AFF;
+            --neutral-1: #F5F5F7;
+            --neutral-2: #DDDDDD;
+            --neutral-3: #666666;
+            --neutral-4: #1A1A1A;
+            --insight-bg: #444444;
+            --card-radius: 20px;
+            --card-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        body {
+            background-color: var(--neutral-1);
+            color: var(--neutral-3);
+            line-height: 1.6;
+            font-size: 16px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            padding: 20px 16px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 90%;
+                padding: 30px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+
+        /* Header Styles */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .header:after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            color: var(--neutral-4);
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--neutral-3);
+            margin-bottom: 5px;
+        }
+
+        .date-badge {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+
+        /* Section Styles */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title:after {
+            content: "";
+            flex-grow: 1;
+            height: 1px;
+            background-color: var(--neutral-2);
+            margin-left: 15px;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--neutral-3);
+            margin-bottom: 20px;
+        }
+
+        /* Card Styles */
+        .cards-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .cards-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .cards-container.three-column {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .card {
+            background: white;
+            border-radius: var(--card-radius);
+            box-shadow: var(--card-shadow);
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(123, 74, 255, 0.12);
+        }
+
+        .card-highlight {
+            border-left: 4px solid var(--primary);
+        }
+
+        .card-number {
+            position: absolute;
+            top: 14px;
+            right: 16px;
+            font-size: 30px;
+            font-weight: bold;
+            color: rgba(123, 74, 255, 0.1);
+            z-index: 1;
+        }
+
+        .card-hashtag {
+            display: inline-block;
+            background-color: rgba(123, 74, 255, 0.08);
+            color: var(--primary);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--neutral-4);
+            margin-bottom: 12px;
+            line-height: 1.3;
+            padding-right: 30px;
+        }
+
+        .card-content {
+            color: var(--neutral-3);
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+
+        .engagement-stats {
+            display: flex;
+            gap: 12px;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 14px;
+            color: var(--neutral-3);
+        }
+
+        .stat svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--primary);
+            opacity: 0.8;
+        }
+
+        /* Quote Box */
+        .quote-box {
+            background-color: rgba(123, 74, 255, 0.05);
+            border-left: 5px solid var(--primary);
+            padding: 12px 16px;
+            border-radius: 0 10px 10px 0;
+            margin: 15px 0;
+            font-style: italic;
+            color: var(--neutral-4);
+        }
+
+        /* Insight Bar */
+        .insight-bar {
+            background-color: var(--insight-bg);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        /* Category Badge */
+        .category-badge {
+            background-color: var(--primary);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 12px;
+        }
+
+        /* Charts & Data Visualization */
+        .chart-section {
+            margin: 40px 0;
+        }
+
+        .chart-container {
+            background: white;
+            border-radius: var(--card-radius);
+            box-shadow: var(--card-shadow);
+            padding: 24px;
+            margin-bottom: 30px;
+        }
+
+        .chart-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--neutral-4);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .charts-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 768px) {
+            .charts-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .donut-chart {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+
+        .donut-chart svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .donut-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .donut-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--neutral-4);
+            line-height: 1;
+        }
+
+        .donut-label {
+            font-size: 14px;
+            color: var(--neutral-3);
+        }
+
+        .chart-legend {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 15px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            color: var(--neutral-3);
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            margin: 15px 0 25px;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-size: 14px;
+            color: var(--neutral-3);
+        }
+
+        .progress-bar-bg {
+            height: 8px;
+            background-color: var(--neutral-2);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: var(--primary);
+            border-radius: 4px;
+        }
+
+        /* Stats Indicators */
+        .stats-indicators {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .stats-indicators {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: var(--card-radius);
+            box-shadow: var(--card-shadow);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--neutral-3);
+        }
+
+        /* Connected Dots */
+        .connected-dots {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .connected-dots::after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 30px;
+            right: 30px;
+            height: 2px;
+            background-color: var(--neutral-2);
+            z-index: 1;
+        }
+
+        .dot {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .dot.active {
+            background-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(123, 74, 255, 0.2);
+        }
+
+        .dot.inactive {
+            background-color: var(--neutral-2);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--neutral-2);
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: var(--neutral-3);
+        }
+
+        .source-badge {
+            display: inline-block;
+            background-color: rgba(123, 74, 255, 0.08);
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 12px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">2025년 4월 13일 SNS 최신 트렌드 요약</h1>
+            <p class="subtitle">소셜 미디어에서 화제가 되고 있는 주요 트렌드</p>
+            <div class="date-badge">2025.04.13</div>
+        </header>
+
+        <section class="section">
+            <h2 class="section-title">스포츠 이슈</h2>
+            
+            <div class="cards-container">
+                <div class="card card-highlight">
+                    <div class="card-number">1</div>
+                    <div class="card-hashtag">#UFC314</div>
+                    <h3 class="card-title">볼카노프스키 vs 로페스</h3>
+                    <p class="card-content">어제(4월 12일) 열린 UFC 314에서 알렉산더 볼카노프스키가 디에고 로페스를 만장일치 판정으로 이기고 페더급 챔피언 벨트를 되찾았습니다. 팬들은 소셜 미디어에서 "볼카노프스키와 로페스가 재대결을 해야 한다"는 의견을 활발히 공유하며, 두 선수의 뛰어난 경기력에 찬사를 보내고 있습니다.</p>
+                    <div class="quote-box">"볼카노프스키와 로페스가 재대결을 해야 한다"</div>
+                    <div class="card-footer">
+                        <div class="engagement-stats">
+                            <div class="stat">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                                <span>845K</span>
+                            </div>
+                            <div class="stat">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M21 12l-18 0M3 12l6.75 6M3 12l6.75 -6" stroke="currentColor" stroke-width="2" fill="none" />
+                                </svg>
+                                <span>325K</span>
+                            </div>
+                        </div>
+                        <div class="category-badge">UFC</div>
+                    </div>
+                </div>
+
+                <div class="card card-highlight">
+                    <div class="card-number">10</div>
+                    <div class="card-hashtag">#UFC314</div>
+                    <h3 class="card-title">패디 핌블렛 UFC 승리</h3>
+                    <p class="card-content">UFC 314에서 패디 핌블렛이 마이클 챈들러를 상대로 압도적인 TKO 승리를 거두며 타이틀 샷에 한 걸음 더 다가갔습니다. 소셜 미디어에서는 그의 인상적인 경기력과 함께 향후 타이틀 도전 가능성에 대한 논의가 활발하게 이루어지고 있으며, 많은 팬들이 그의 승리를 축하하는 메시지를 공유하고 있습니다.</p>
+                    <div class="insight-bar">압도적인 TKO 승리로 타이틀 샷에 더 가까워진 핌블렛</div>
+                    <div class="card-footer">
+                        <div class="engagement-stats">
+                            <div class="stat">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                                <span>712K</span>
+                            </div>
+                            <div class="stat">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M21 12l-18 0M3 12l6.75 6M3 12l6.75 -6" stroke="currentColor" stroke-width="2" fill="none" />
+                                </svg>
+                                <span>298K</span>
+                            </div>
+                        </div>
+                        <div class="category-badge">UFC</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-number">3</div>
+                    <div class="card-hashtag">#마스터스</div>
+                    <h3 class="card-title">마스터스 토너먼트 파이널 라운드</h3>
+                    <p class="card-content">골프 마스터스 토너먼트 파이널 라운드를 앞두고 로리 매킬로이가 리더보드 1위, 캐나다의 코리 코너스가 3위를 기록하며 큰 관심을 모으고 있습니다. 특히 코너스는 캐나다 선수로는 두 번째로 마스터스 우승을 노리고 있어 많은 골프 팬들이 마지막 라운드에 주목하고 있습니다.</p>
+                    <div class="card-footer">
+                        <div class="engagement-stats">
+                            <div class="stat">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                                <span>486K</span>
+                            </div>
+                            <div class="stat">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M21 12l-18 0M3 12l6.75 6M3 12l6.75 -6" stroke="currentColor" stroke-width="2" fill="none" />
+                                </svg>
+                                <span>179K</span>
+                            </div>
+                        </div>
+                        <div class="category-badge">골프</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="chart-section">
+            <div class="chart-container">
+                <h3 class="chart-title">UFC 314 관련 소셜 미디어 참여도</h3>
+                <div class="charts-row">
+                    <div>
+                        <div class="donut-chart">
+                            <svg viewBox="0 0 36 36">
+                                <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#DDDDDD" stroke-width="3"></circle>
+                                <circle cx="18" cy="18" r="15.91549430918954" fill="transparent" stroke="#7B4AFF" stroke-width="3" stroke-dasharray="70 30" stroke-dashoffset="25"></circle>
+                                <g class="donut-center">
+                                    <text x="18" y="18" text-anchor="middle" dominant-baseline="central" font-size="8" font-weight="bold">70%</text>
+                                </g>
+                            </svg>
+                            <div class="donut-center">
+                                <div class="donut-value">70%</div>
+                                <div class="donut-label">참여율</div>
+                            </div>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #7B4AFF;"></div>
+                                <span>적극적 참여</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #DDDDDD;"></div>
+                                <span>소극적 참여</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>볼카노프스키 지지</span>
+                                <span>62%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar" style="width: 62%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>로페스 지지</span>
+                                <span>38%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar" style="width: 38%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>재대결 원하는 비율</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>패디 핌블렛 타이틀 샷 지지</span>
+                                <span>77%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar" style="width: 77%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section">
+            <h2 class="section-title">엔터테인먼트</h2>
+            
+            <div class="cards-container">
+                <div class="card card-highlight">
+                    <div class="card-number">2</div>
+                    <div class="card-hashtag">#ENCHELLA</div>
+                    <h3 class="card-title">엔하이픈 코첼라 공연</h3>
+                    <p class="card-content">케이팝 그룹 엔하이픈이 오늘(4월 13일) 미국 코첼라 페스티벌에서 현지시간 기준 오전 12:35에서 1:20까지 공연을 선보일 예정이며, SNS에서는 #ENCHELLA 해시태그가 뜨겁게 트렌딩 중입니다. 팬들은 "Blockbuster", "Blessed-Cursed", "Future Perfect" 등이 포함된 세트리스트를 기대하며 열띤 응원 메시지를 공유하고 있습니다.</p>
+                    <div class="insight-bar">케이팝 그룹 최초 코첼라 메인 스테이지 공연</div>
+                    <div class="card-footer">
+                        <div class="engagement-stats">
+                            <div class="stat">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                                <span>1.2M</span>
+                            </div>
+                            <div class="stat">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M21 12l-18 0M3 12l6.75 6M3 12l6.75 -6" stroke="currentColor" stroke-width="2" fill="none" />
+                                </svg>
+                                <span>682K</span>
+                            </div>
+                        </div>
+                        <div class="category-badge">K-POP</div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-number">4</div>
+                    <div class="card-hashtag">#TaylorTravis</div>
+                    <h3 class="card-title">트래비스 켈시-테일러 스위프트 이별설</h3>
+                    <p class="card-content">"트래비스 켈시가 테일러 스위프트와 이별했다"는 해시태그가 트렌딩을 기록하고 있지만, 이는 사실이 아닌 것으로 확인되었습니다. 두 사람은 여전히 사랑에 빠져 있으며, 최근 낮은 프로필을 유지하고 있어 소문이 확산된 것으로 보이나, 켈시 측에서 이를 정면으로 반박했습니다.</p>
+                    <div class="quote-box">"두 사람은 여전히 사랑에 빠져 있으며, 단지 낮은 프로필을 유지하고 있을 뿐입니다."</div>
+                    <div class="card-footer">
+                        <div class="engagement-stats">
+                            <div class="stat">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                                <span>935K</span>
+                            </div>
+                            <div class="stat">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M21 12l-18 0M3 12l6.75 6M3 12l6.75 -6" stroke="currentColor" stroke-width="2" fill="none" />
+                                </svg>
+                                <span>542K</span>
+                            </div>
+                        </div>
+                        <div class="category-badge">연예</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">경제 & 정치</h2>
+            
+            <div class="cards-container">
+                <div class="card card-highlight">
+                    <div class="card-number">5</div>
+                    <div class="card-hashtag">#비트코인</div>
+                    <h3 class="card-title">비트코인 가격 $85,000 회복</h3>
+                    <p class="card-content">비트코인 가격이 5개월 만의 최저점을 찍은 후 오늘(4월 13일) 기준 2.3% 상
