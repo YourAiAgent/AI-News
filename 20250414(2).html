@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025년 4월 14일 SNS 트렌드</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #7B4AFF;
+            --primary-light: #F0EBFF;
+            --dark: #1A1A1A;
+            --gray: #666666;
+            --light-gray: #DDDDDD;
+            --white: #FFFFFF;
+            --insight-bg: #444444;
+            --tech: #4F46E5;
+            --science: #06B6D4;
+            --space: #3B82F6;
+            --lifestyle: #F97316;
+            --business: #10B981;
+            --culture: #EC4899;
+            --border-radius: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #F9F9F9;
+            color: var(--gray);
+            line-height: 1.6;
+            padding: 16px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .date-badge {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .intro {
+            max-width: 760px;
+            margin: 0 auto 2rem;
+            text-align: center;
+            color: var(--gray);
+            font-size: 16px;
+        }
+
+        .trend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .trend-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .trend-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(123, 74, 255, 0.1);
+        }
+
+        .card-header {
+            padding: 1.5rem 1.5rem 1rem;
+            position: relative;
+        }
+
+        .card-number {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            width: 28px;
+            height: 28px;
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .card-category {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .category-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+
+        .category-name {
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .card-body {
+            padding: 0 1.5rem 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content {
+            font-size: 16px;
+            color: var(--gray);
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            margin-top: auto;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.35rem 0.75rem;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-primary {
+            background-color: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 120px;
+            margin: 1rem auto;
+        }
+
+        .donut-chart {
+            width: 100%;
+            height: auto;
+        }
+
+        .chart-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .chart-value {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--primary);
+        }
+
+        .chart-label {
+            font-size: 12px;
+            color: var(--gray);
+        }
+
+        .progress-container {
+            margin: 1rem 0;
+        }
+
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background-color: var(--light-gray);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--primary);
+            border-radius: 4px;
+        }
+
+        .insight-box {
+            background-color: var(--insight-bg);
+            color: var(--white);
+            padding: 1rem;
+            border-radius: 10px;
+            font-size: 14px;
+            margin-top: 1rem;
+        }
+
+        .quote-box {
+            background-color: var(--primary-light);
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            border-radius: 0 10px 10px 0;
+            font-size: 14px;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        .trend-icon {
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .dot-trail {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            margin: 0 4px;
+            opacity: 0.3;
+        }
+
+        .dot.active {
+            opacity: 1;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--light-gray);
+            font-size: 14px;
+            color: var(--gray);
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .trend-card {
+            animation: fadeIn 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .trend-card:nth-child(1) { animation-delay: 0.1s; }
+        .trend-card:nth-child(2) { animation-delay: 0.2s; }
+        .trend-card:nth-child(3) { animation-delay: 0.3s; }
+        .trend-card:nth-child(4) { animation-delay: 0.4s; }
+        .trend-card:nth-child(5) { animation-delay: 0.5s; }
+        .trend-card:nth-child(6) { animation-delay: 0.6s; }
+        .trend-card:nth-child(7) { animation-delay: 0.7s; }
+        .trend-card:nth-child(8) { animation-delay: 0.8s; }
+        .trend-card:nth-child(9) { animation-delay: 0.9s; }
+        .trend-card:nth-child(10) { animation-delay: 1s; }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .trend-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .title {
+                font-size: 28px;
+            }
+            
+            .subtitle {
+                font-size: 20px;
+            }
+        }
+
+        /* Color settings for categories */
+        .cat-tech { background-color: var(--tech); }
+        .cat-science { background-color: var(--science); }
+        .cat-space { background-color: var(--space); }
+        .cat-lifestyle { background-color: var(--lifestyle); }
+        .cat-business { background-color: var(--business); }
+        .cat-culture { background-color: var(--culture); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <span class="date-badge">2025년 4월 14일</span>
+            <h1 class="title">X(트위터) 최신 트렌드</h1>
+            <h2 class="subtitle">실시간으로 뜨거운 화제 10가지</h2>
+        </header>
+        
+        <p class="intro">
+            2025년 4월 14일 기준, 소셜 미디어에서 가장 뜨거운 화제들을 모았습니다. 과학기술의 혁신부터 문화 트렌드까지, 오늘의 글로벌 대화를 이끄는 주제들을 살펴보세요.
+        </p>
+        
+        <div class="trend-grid">
+            <!-- 트렌드 1 -->
+            <div class="trend-card">
+                <div class="card-header">
+                    <div class="card-category">
+                        <span class="category-dot cat-tech"></span>
+                        <span class="category-name">과학기술</span>
+                    </div>
+                    <div class="card-number">1</div>
+                    <h3 class="card-title">Type One Energy 핵융합 발전소 설계 공개</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-content">
+                        Type One Energy가 Infinity Two 핵융합 발전소의 획기적인 설계를 담은 6개의 논문을 발표했습니다. 이 설계는 핵융합 에너지를 소비하는 것보다 40배나 많은 에너지를 생산할 수 있는 잠재력을 가지고 있어 에너지 분야의 혁명적 돌파구로 주목받고 있습니다.
+                    </p>
+                    <div class="card-footer">
+                        <div class="chart-container">
+                            <svg class="donut-chart" viewBox="0 0 32 32">
+                                <circle r="16" cx="16" cy="16" fill="#DDDDDD" />
+                                <circle r="8" cx="16" cy="16" fill="#FFFFFF" />
+                                <path d="M16 0A16 16 0 0 1 32 16 L16 16 Z" fill="#7B4AFF" />
+                            </svg>
+                            <div class="chart-center">
+                                <div class="chart-value">Q=40</div>
+                                <div class="chart-label">에너지 효율</div>
+                            </div>
+                        </div>
+                        <div class="insight-box">
+                            테네시 밸리 당국과의 파트너십을 통해 설계에서 파일럿 테스트로 이동할 계획입니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 트렌드 2 -->
+            <div class="trend-card">
+                <div class="card-header">
+                    <div class="card-category">
+                        <span class="category-dot cat-space"></span>
+                        <span class="category-name">우주</span>
+                    </div>
+                    <div class="card-number">2</div>
+                    <h3 class="card-title">블루 오리진의 첫 여성 전용 우주 비행</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-content">
+                        케이티 페리와 게일 킹을 포함한 6명의 여성 승무원이 블루 오리진의 뉴 셰퍼드 우주선에 탑승하는 역사적인 비행이 오늘 오전 8시 30분(중부 표준시)에 시작됩니다. 이 11분간의 비행은 발렌티나 테레시코바가 1963년 우주에 간 이후 최초의 전체 여성 승무원으로 기록될 예정입니다.
+                    </p>
+                    <div class="card-footer">
+                        <div class="badge badge-primary">역사적 이벤트</div>
+                        <div class="badge badge-primary">우주 관광</div>
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>발사 준비</span>
+                                <span>100%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 트렌드 3 -->
+            <div class="trend-card">
+                <div class="card-header">
+                    <div class="card-category">
+                        <span class="category-dot cat-lifestyle"></span>
+                        <span class="category-name">음식</span>
+                    </div>
+                    <div class="card-number">3</div>
+                    <h3 class="card-title">샤퀴테리 나초 - 새로운 음식 트렌드</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-content">
+                        TikTok에서 최근 샤퀴테리 나초가 인기를 끌고 있으며, 이 트렌드는 샤퀴테리 보드의 다양한 재료를 나초처럼 배치하는 방식입니다. 프로슈토와 브리 치즈, 살라미 등의 재료를 감자칩 위에 얹어 오븐에 구워내는 이 레시피는 소셜 미디어에서 "칩-쿠테리"라는 이름으로도 불리며 파티 음식으로 큰 인기를 얻고 있습니다.
+                    </p>
+                    <div class="card-footer">
+                        <div class="quote-box">
+                            "샤퀴테리 나초의 매력은 규칙이 없다는 것입니다. 원하는 대로 조합하세요!" - 라이프스타일 블로거
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 트렌드 4 -->
+            <div class="trend-card">
+                <div class="card-header">
+                    <div class="card-category">
+                        <span class="category-dot cat-tech"></span>
+                        <span class="category-name">자동차</span>
+                    </div>
+                    <div class="card-number">4</div>
+                    <h3 class="card-title">테슬라 모델 3 하이 레인지 버전 출시</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-content">
+                        테슬라가 새로운 모델 3 롱 레인지 버전을 출시하여 한 번 충전으로 최대 363마일(약 584km)을 주행할 수 있는 기능을 선보였습니다. 이 전기차는 기존 모델보다 연비가 개선되었을 뿐만 아니라, 새로운 2025년 봄 업데이트를 통해 B필러 카메라 및 적응형 헤드라이트 등 새로운 기능이 추가되어 소비자들의 뜨거운 관심을 받고 있습니다.
+                    </p>
+                    <div class="card-footer">
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>주행 거리 개선</span>
+                                <span>+15%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 15%;"></div>
+                            </div>
+                        </div>
+                        <div class="badge badge-primary">전기차</div>
+                        <div class="badge badge-primary">지속가능성</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 트렌드 5 -->
+            <div class="trend-card">
+                <div class="card-header">
+                    <div class="card-category">
+                        <span class="category-dot cat-space"></span>
+                        <span class="category-name">우주</span>
+                    </div>
+                    <div class="card-number">5</div>
+                    <h3 class="card-title">스페이스X의 27번째 스타링크 위성 발사</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-content">
+                        스페이스X가 4월 14일 자정(동부 표준시)에 케이프 커내버럴 우주군 기지에서 팰콘 9 로켓을 이용해 27개의 스타링크 위성을 발사했습니다. 이는 같은 부스터로 이루어진 27번째 비행으로, 재사용 로켓 기술의 신뢰성과 효율성을 다시 한번 입증했으며, 이로써 전 세계 인터넷 연결망이 더욱 강화될 것으로 기대됩니다.
+                    </p>
+                    <div class="card-footer">
+                        <div class="badge badge-primary">우주 기술</div>
+                        <div class="badge badge-primary">재사용 로켓</div>
+                        <div class="insight-box">
+                            이 로켓 부스터는 이전 기록을 경신하며 27번째 재사용으로 우주 산업의 지속가능성을 높였습니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 트렌드 6 -->
+            <div class="trend-card">
+                <div class="card-header">
+                    <div class="card-category">
+                        <span class="category-dot cat-lifestyle"></span>
+                        <span class="category-name">라이프스타일</span>
+                    </div>
+                    <div class="card-number">6</div>
+                    <h3 class="card-title">#MondayBlues 해시태그와 워라밸 논쟁</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-content">
+                        월요일 아침의 우울함을 표현하는 #MondayBlues 해시태그가 주목받으면서, 직장과 생활의 균형에 대한 대화로 발전하고 있습니다. 특히 2025년 들어 강화된 하이브리드 근무 모델과 4일 근무제에 대한 논의가 활발해지면서, 일과 휴식의 적절한 균형에 대한 사회적 담론이 형성되고 있습니다.
+                    </p>
+                    <div class="card-footer">
+                        <div class="chart-container">
+                            <svg class="donut-chart" viewBox="0 0 32 32">
+                                <circle r="16" cx="16" cy="16" fill="#DDDDDD" />
+                                <circle r="8" cx="16" cy="16" fill="#FFFFFF" />
+                                <path d="M16 0A16 16 0 0 1 32 16 L16 16 Z" fill="#7B4AFF" />
+                                <path d="M16 0A16 16 0 0 1 16 32 L16 16 Z" fill="#DDDDDD" />
+                            </svg>
+                            <div class="chart-center">
+                                <div class="chart-value">32%</div>
+                                <div class="chart-label">4일 근무제 도입</div>
+                            </div>
+                        </div>
+                        <div class="badge badge-primary">워라밸</div>
+                        <div class="badge badge-primary">직장문화</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 트렌드 7 -->
+            <div class="trend-card">
+                <div class="card-header">
+                    <div class="card-category">
+                        <span class="category-dot cat-business"></span>
+                        <span class="category-name">경제</span>
+                    </div>
+                    <div class="card-number">7</div>
+                    <h3 class="card-title">디지털 노마드 세금법 변화</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-content">
+                        미국을 비롯한 여러 국가에서 디지털 노마드를 위한 세금 규정에 중요한 변화가 생겨 해외에서 일하는 프리랜서와 원격 근무자들의 관심이 집중되고 있습니다. 특히 해외 소득 면제 한도가 126,500달러로 증가했으며, 루이지애나 주에서는 디지털 노마드에게 50%의 소득세 면제를 제공하는 법안이 제정되어 원격 근무자들 사이에서 뜨거운 화제가 되고 있습니다.
+                    </p>
+                    <div class="card-footer">
+                        <div class="progress-container">
+                            <div class="progress-label">
+                                <span>해외 소득 면제 한도</span>
+                                <span>$126,500</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 55%;"></div>
+                            </div>
+                        </div>
+                        <div class="quote-box">
+                            루이지애나 주는 디지털 노마드에게 50%의 소득세 면제 혜택을 제공합니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 트렌드 8 -->
+            <div class="trend-card">
+                <div class="card-header">
+                    <div class="card-category">
+                        <span class="category-dot cat-science"></span>
+                        <span class="category-name">과학</span>
+                    </div>
+                    <div class="card-number">8</div>
+                    <h3 class="card-title">세계 퀀텀 데이 (World Quantum Day) 기념</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-content">
+                        4월 14일은 플랑크 상수의 첫 자릿수인 4.14를 기념하는 '세계 퀀텀 데이'로, 전 세계적으로 양자 과학과 기술에 대한 인식을 높이는 다양한 행사가 개최됩니다. 2025년은 특별히 '국제 양자의 해'로 지정되어 양자 컴퓨팅의 발전과 이를 통한 사회적 혁신 가능성에 대한 토론이 활발히 이루어지고 있습니다.
+                    </p>
+                    <div class="card-footer">
+                        <div class="badge badge-primary">양자 컴퓨팅</div>
+                        <div class="badge badge-primary">과학 교육</div>
+                        <div class="insight-box">
+                            양자 기술은 미래 컴퓨팅, 통신, 센싱, 시뮬레이션 분야에 혁명적인 변화를 가져올 것으로 예상됩니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 트렌드 9 -->
+            <div class="trend-card">
+                <div class="card-header">
+                    <div class="card-category">
+                        <span class="category-dot cat-business"></span>
+                        <span class="category-name">경제</span>
+                    </div>
+                    <div class="card-number">9</div>
+                    <h3 class="card-title">트럼프 정부의 전자제품 관세 면제 일시적 조치</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-content">
+                        트럼프 행정부가 중국산 수입품에 대한 관세 부과에서 스마트폰과, 컴퓨터, 반도체를 제외한다고 발표했지만, 상무장관은 이것이 일시적 조치이며 향후 몇 달 내에 '반도체 부문 관세'로 대체될 것이라고 밝혔습니다. 이 발표로 아시아 기술주가 단기적으로 반등했으나, 곧 다가올 추가 규제에 대한 불확실성으로 시장의 긴장감은 계속되고 있습니다.
+                    </p>
+                    <div class="card-footer">
+                        <div class="quote-box">
+                            "이는 일시적 조치이며, 향후 한두 달 내에 반도체 관세로 대체될 것입니다." - 미국 상무장관
+                        </div>
+                        <div class="badge badge-primary">무역전쟁</div>
+                        <div class="badge badge-primary">글로벌 경제</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 트렌드 10 -->
+            <div class="trend-card">
+                <div class="card-header">
+                    <div class="card-category">
+                        <span class="category-dot cat-culture"></span>
+                        <span class="category-name">패션</span>
+                    </div>
+                    <div class="card-number">10</div>
+                    <h3 class="card-title">Gen Alpha 패션 트렌드 - 코케트와 코티지코어</h3>
+                </div>
+                <div class="card-body">
+                    <p class="card-content">
