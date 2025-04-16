@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글로벌 뉴스 다이제스트</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.8/variable/pretendardvariable.min.css">
+  <style>
+    :root {
+      --primary: #7B4AFF;
+      --bg-light: #F5F5F7;
+      --text-dark: #1A1A1A;
+      --text-body: #666666;
+      --border-light: #DDDDDD;
+      --card-radius: 20px;
+      --space-xs: 8px;
+      --space-sm: 16px;
+      --space-md: 24px;
+      --space-lg: 32px;
+      --space-xl: 48px;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-body);
+      line-height: 1.6;
+      padding: var(--space-md);
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xl);
+      padding-bottom: var(--space-xl);
+    }
+    
+    header {
+      text-align: center;
+      padding: var(--space-lg) 0;
+    }
+    
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: var(--space-xs);
+      line-height: 1.2;
+    }
+    
+    .subtitle {
+      font-size: 16px;
+      color: var(--text-body);
+      margin-top: var(--space-sm);
+      margin-bottom: var(--space-md);
+    }
+    
+    .date-badge {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .section-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      position: relative;
+      padding-bottom: var(--space-xs);
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background-color: var(--primary);
+      border-radius: 3px;
+    }
+    
+    .cards {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    
+    .card {
+      background: white;
+      border-radius: var(--card-radius);
+      padding: var(--space-md);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
+    
+    .tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+    
+    .tag-world {
+      background-color: rgba(123, 74, 255, 0.1);
+      color: #7B4AFF;
+    }
+    
+    .tag-korea {
+      background-color: rgba(237, 100, 166, 0.1);
+      color: #ED64A6;
+    }
+    
+    .tag-australia {
+      background-color: rgba(49, 130, 206, 0.1);
+      color: #3182CE;
+    }
+    
+    .tag-tech {
+      background-color: rgba(72, 187, 120, 0.1);
+      color: #48BB78;
+    }
+    
+    .card-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: var(--space-sm);
+      line-height: 1.3;
+    }
+    
+    .card-content {
+      font-size: 16px;
+      color: var(--text-body);
+    }
+    
+    .divider {
+      height: 1px;
+      background-color: var(--border-light);
+      margin: var(--space-md) 0;
+    }
+    
+    .footer {
+      text-align: center;
+      color: var(--text-body);
+      font-size: 14px;
+      margin-top: var(--space-lg);
+      padding-top: var(--space-md);
+      border-top: 1px solid var(--border-light);
+    }
+    
+    @media (min-width: 768px) {
+      body {
+        padding: var(--space-lg);
+      }
+      
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>글로벌 뉴스 다이제스트</h1>
+      <p class="subtitle">전 세계, 한국, 호주의 최신 주요 뉴스</p>
+      <div class="date-badge">2025년 4월 17일</div>
+    </header>
+    
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">세계 주요 뉴스</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <span class="tag tag-world">경제</span>
+          <h3 class="card-title">중국, 미국 수입품에 대한 관세 125%로 인상</h3>
+          <p class="card-content">베이징이 중국 제품에 대한 관세 인상을 결정한 트럼프 대통령에 대응해 미국 수입품에 대한 관세를 125%로 올렸어요. 이번 조치로 무역전쟁의 위험이 고조되고 글로벌 공급망에 혼란이 예상되고 있답니다.</p>
+        </div>
+        
+        <div class="card">
+          <span class="tag tag-world">정치</span>
+          <h3 class="card-title">트럼프 대통령, 일본-미국 무역 회담에 직접 참석 예정</h3>
+          <p class="card-content">트럼프 대통령이 수요일에 열리는 일본과 미국 무역 관리들의 회의에 직접 참석하겠다고 깜짝 발표했어요. 이는 글로벌 수입품에 대한 관세 폭탄으로 촉발된 협상을 대통령이 직접 감독하고 싶어한다는 열망을 보여주는 행보랍니다.</p>
+        </div>
+        
+        <div class="card">
+          <span class="tag tag-world">경제</span>
+          <h3 class="card-title">미국 관세, 독일 GDP 성장률에 타격 예상</h3>
+          <p class="card-content">독일 경제 연구소들이 알루미늄, 철강, 자동차 수입품에 대한 미국의 관세가 2025년과 2026년 각각 독일 GDP 성장률을 0.1%포인트 감소시킬 것이라고 경고했어요. 추가 관세로 인해 이 영향은 두 배로 커질 수 있다고 하네요.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">한국 관련 뉴스</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <span class="tag tag-korea">정치</span>
+          <h3 class="card-title">홍남표 창원시장, 대법원 선거법 위반 확정으로 해임</h3>
+          <p class="card-content">홍남표 창원시장이 2022년 지방선거 당시 선거법 위반으로 대법원에서 유죄가 확정돼 시장직에서 해임됐어요. 미국은 신안군 태평 염전의 천일염 제품에 대해서도 입국을 금지했다고 하네요.</p>
+        </div>
+        
+        <div class="card">
+          <span class="tag tag-korea">정치</span>
+          <h3 class="card-title">윤석열 전 대통령, 헌법재판소 판결로 파면 확정</h3>
+          <p class="card-content">헌법재판소가 윤석열 전 대통령의 탄핵을 만장일치로 인용해 대통령직에서 파면됐어요. 윤 전 대통령은 한국 역사상 두 번째로 탄핵으로 물러난 대통령이 되었답니다.</p>
+        </div>
+        
+        <div class="card">
+          <span class="tag tag-korea">정치</span>
+          <h3 class="card-title">윤석열 전 대통령, 내란죄 형사 재판 직면</h3>
+          <p class="card-content">윤석열 전 대통령이 형사 내란죄 혐의로 재판을 앞두고 있으며, 변론은 4월 14일부터 시작될 예정이에요. 윤 전 대통령의 계엄령 선포 이후 한국은 수개월간 정치적 혼란을 겪고 있답니다.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">호주 관련 뉴스</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <span class="tag tag-australia">경제</span>
+          <h3 class="card-title">호주 달러, 관세 우려로 팬데믹 이후 최저치 기록</h3>
+          <p class="card-content">호주 달러가 미 달러 대비 팬데믹 이후 최저 수준으로 떨어졌어요. 원자재 가격 하락과 호주 중앙은행의 공격적인 금리 인하 예상이 현지 통화 가치를 떨어뜨리고 있답니다.</p>
+        </div>
+        
+        <div class="card">
+          <span class="tag tag-australia">정치</span>
+          <h3 class="card-title">노동당, 다윈항 호주 소유권 환원 추진</h3>
+          <p class="card-content">리처드 마를스 장관은 노동당이 재선된다면 다윈항을 호주 소유로 되돌리기 위한 절차를 밟을 것이라고 밝혔어요. 알바니스 총리도 다윈항 매입을 위한 협상에 나설 것이라고 확인했답니다.</p>
+        </div>
+        
+        <div class="card">
+          <span class="tag tag-australia">사회</span>
+          <h3 class="card-title">알바니스 총리, "호주에서 주택 소유는 상속받을 특권이 되어선 안 돼"</h3>
+          <p class="card-content">알바니스 총리가 노동당 선거 캠페인 출범식에서 "호주에서 주택 소유는 운이 좋아 상속받는 특권이 되어서는 안 된다"고 강조했어요. 서호주 주도 퍼스에서 열린 행사에서 이같이 밝히며 주택 정책을 강조했답니다.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="section">
+      <div class="section-header">
+        <h2 class="section-title">기술/과학 뉴스</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <span class="tag tag-tech">과학</span>
+          <h3 class="card-title">연구팀, 단일 가닥 DNA에 표적 절단을 유도하는 새로운 효소군 발견</h3>
+          <p class="card-content">연구팀이 단일 가닥 DNA에 표적 절단을 유도할 수 있는 새로운 효소군을 발견했어요. 이는 몇 년 전 CRISPR 기술의 등장 이후 또 다른 과학적 돌파구로 평가받고 있답니다.</p>
+        </div>
+        
+        <div class="card">
+          <span class="tag tag-tech">기술</span>
+          <h3 class="card-title">인도, AI와 반도체 제조 강화를 위한 나노전자 생태계 확장</h3>
+          <p class="card-content">인도가 AI, 슈퍼컴퓨팅, 반도체 제조를 강화하기 위해 나노전자 생태계를 확장하고 있어요. 전자정보기술부(MeitY)의 이니셔티브는 국내 칩 생산 강화, 연구 향상, 글로벌 반도체 리더로서 인도의 입지를 강화하는 것을 목표로 하고 있답니다.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      © 2025 글로벌 뉴스 다이제스트 | 데이터 기준: 2025년 4월 17일
+    </div>
+  </div>
+</body>
+</html>
